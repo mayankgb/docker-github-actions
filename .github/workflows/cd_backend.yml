@@ -24,6 +24,18 @@ jobs:
                 push: true
                 tags: mayk03jun/user-app-backend:${{github.sha}}
 
+            - name: Deploy to my ec2 instance 
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                host: 34.237.243.161
+                username: ubuntu
+                key: ${{ secrets.SSH_KEY }}
+                port: 22
+                script: |
+                 ls
+                 docker stop backend
+                 docker run --name backend -p 8000:8000 -d mayk03jun/user-app-backend:${{github.sha}}
+
             
 
 

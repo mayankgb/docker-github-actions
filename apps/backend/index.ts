@@ -80,5 +80,12 @@ app.post("/create", async (req, res) => {
 
 })
 
+app.get("/", async (req, res) => {
+    res.json({
+        message:"working"
+    })
+    return
+})
+
 app.listen(port)
 
