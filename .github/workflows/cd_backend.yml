@@ -29,7 +29,7 @@ jobs:
               with:
                 host: 34.237.243.161
                 username: ubuntu
-                key: ${{ secrets.SSH_KEY }}
+                key: ${{ secrets.SSH_SECRETS}}
                 port: 22
                 script: |
                  ls
