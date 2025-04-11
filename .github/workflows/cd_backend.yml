@@ -22,7 +22,7 @@ jobs:
                 context: .
                 file: ./docker/Dockerfile.backend
                 push: true
-                tags: mayankgb/user-app-backend:${{github.sha}}
+                tags: mayk03jun/user-app-backend:${{github.sha}}
 
             
 
