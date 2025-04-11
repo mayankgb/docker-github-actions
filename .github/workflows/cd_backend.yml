@@ -34,6 +34,7 @@ jobs:
                 script: |
                  ls
                  docker stop backend
+                 docker rm backend
                  docker run --name backend -p 8000:8000 -e DATABASE_URL=${{secrets.DATABASE_URL}} -d mayk03jun/user-app-backend:${{github.sha}}
 
             
